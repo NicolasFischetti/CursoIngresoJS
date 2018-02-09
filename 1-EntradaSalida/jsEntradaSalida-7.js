@@ -7,10 +7,10 @@ function sumar()
 	var numero_uno;
 	var numero_dos;
 
-	numero_uno= document.getElementById("numeroUno");
-	numero_dos= document.getElementById("numeroDos");
+	numero_uno= document.getElementById("numeroUno").value;
+	numero_dos= document.getElementById("numeroDos").value;
 
-	var resultado= parseInt(numero_uno) + parseInt(numero_uno);
+	var resultado= parseInt(numero_uno) + parseInt(numero_dos);
 
 	alert("La suma es: "+resultado);
 }
@@ -20,8 +20,8 @@ function restar()
 	var numero_uno;
 	var numero_dos;
 
-	numero_uno= document.getElementById("numeroUno");
-	numero_dos= document.getElementById("numeroDos");
+	numero_uno= document.getElementById("numeroUno").value;
+	numero_dos= document.getElementById("numeroDos").value;
 
 	var resultado= parseInt(numero_uno) - parseInt(numero_dos);
 
@@ -33,8 +33,8 @@ function multiplicar()
 	var numero_uno;
 	var numero_dos;
 
-	numero_uno= document.getElementById("numeroUno");
-	numero_dos= document.getElementById("numeroDos");
+	numero_uno= document.getElementById("numeroUno").value;
+	numero_dos= document.getElementById("numeroDos").value;
 
 	var resultado= parseInt(numero_uno) * parseInt(numero_dos);
 
@@ -46,8 +46,8 @@ function dividir()
 	var numero_uno;
 	var numero_dos;
 
-	numero_uno= document.getElementById("numeroUno");
-	numero_dos= document.getElementById("numeroDos");
+	numero_uno= document.getElementById("numeroUno").value;
+	numero_dos= document.getElementById("numeroDos").value;
 
 	var resultado= parseInt(numero_uno) / parseInt(numero_dos);
 
