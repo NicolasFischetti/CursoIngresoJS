@@ -3,34 +3,27 @@ function Mostrar()
 //tomo la edad  
 
 	var edad;
-	var soltero;
-	var divorciado;
-	var casado;
+	var estado_civil;
 
 	edad= document.getElementById('edad').value;
-	casado= document.getElementById("estadoCivil").value;
-	divorciado= document.getElementById("estadoCivil").value;
-	soltero= document.getElementById("estadoCivil").value;
+	estado_civil= document.getElementById("estadoCivil").value;
 
 
-	if (edad < 18 !== "casado")
+	if (edad < 18 && estado_civil !== "Soltero" )
 
 	{
 		alert("Es muy pequeño para NO ser soltero");
 
 	}
 
-	else if (edad < 18 !== "divorciado")
 
-	{
+	else
 
-		alert("Es muy pequeño para NO ser soltero");
-	}
+	{ 
 
-	else 
+		alert("Es muy pequeño para ser soltero");
 
-	{
-		alert("Es muy pequeño NO para ser soltero");
-	}
+	} 
+	
 
 }//FIN DE LA FUNCIÓN
