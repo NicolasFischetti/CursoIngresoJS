@@ -18,7 +18,7 @@ function Mostrar()
 
 	
 		
-	if (nota >= 4 && nota <= 8)
+	else if (nota >= 4)
 
 	{
 
