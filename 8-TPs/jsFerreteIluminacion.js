@@ -18,6 +18,7 @@ function CalcularPrecio ()
 	var preciodescuento40;
 	var preciodescuento30;
 	var preciodescuento25;
+	var preciodescuento20;
 	var preciodescuento15;
 	var preciodescuento10;
 	var preciodescuento5;
@@ -31,6 +32,7 @@ function CalcularPrecio ()
 	var descuento5;
 	var preciosindescuento;
 	var ArgentinaLuz;
+	var FelipeLamparas;
 	
 	
 
@@ -44,6 +46,7 @@ function CalcularPrecio ()
 	preciodescuento50= parseInt(preciodescuento50);
 	preciodescuento40= parseInt(preciodescuento40);
 	preciodescuento30= parseInt(preciodescuento30);
+	preciodescuento20= parseInt(preciodescuento20);
 	preciodescuento25= parseInt(preciodescuento25);
 	preciodescuento15= parseInt(preciodescuento15);
 	preciodescuento10= parseInt(preciodescuento10);
@@ -58,6 +61,7 @@ function CalcularPrecio ()
 	descuento10= parseInt(descuento10);
 	descuento5= parseInt(descuento5);
 	ArgentinaLuz=parseInt(ArgentinaLuz);
+	FelipeLamparas=parseInt(FelipeLamparas);
 	
 
 
@@ -116,40 +120,57 @@ function CalcularPrecio ()
 	if (cantidad >= 6) 
 
 	{	
-
 		document.getElementById("precioDescuento").value= preciodescuento50;
-		
-
 	}
 
 	else 
-
 	{
 
 	}
 
-
-	if (cantidad == 5 && marca == "ArgentinaLuz")
-	
-	{
-		
-		
+	if (cantidad == 5 && marca == "ArgentinaLuz")	
+	{		
 		document.getElementById("precioDescuento").value= preciodescuento40;
-
 	}
-
 
 	else
 	{
+		document.getElementById("precioDescuento").value= preciodescuento30;
+	}
+
+	if (cantidad == 4)
+	{
 
 	}
 
-
+	else if (  marca == "ArgentinaLuz" || marca== "“FelipeLamparas”")
 	
+	{
+		document.getElementById("precioDescuento").value= preciodescuento25;
+	}
+
+	else
+	{
+		document.getElementById("precioDescuento").value= preciodescuento20;
+	}
+
+	if (cantidad == 3 && marca== "FelipeLamparas") 
+	{
+		document.getElementById("precioDescuento").value= preciodescuento10;
+	}
+
+	else if (marca== "ArgentinaLuz") 
+	{
+		document.getElementById("precioDescuento").value= preciodescuento15;
+	}
+	
+	 else
+
+	 {
+	 	document.getElementById("precioDescuento").value= preciodescuento5;
+	 }
 
 		
-
-
 	
 		
 	
