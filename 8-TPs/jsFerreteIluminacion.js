@@ -37,9 +37,6 @@ function CalcularPrecio ()
 	cantidad= document.getElementById('Cantidad').value;
 	marca= document.getElementById("Marca").value;
 	
-	
-
-	
 
 
 	lamparitas= parseInt(lamparitas);
@@ -61,8 +58,6 @@ function CalcularPrecio ()
 	descuento10= parseInt(descuento10);
 	descuento5= parseInt(descuento5);
 	ArgentinaLuz=parseInt(ArgentinaLuz);
-	
-
 	
 
 
@@ -118,9 +113,6 @@ function CalcularPrecio ()
 
 
 
-
-
-
 	if (cantidad >= 6) 
 
 	{	
@@ -137,11 +129,11 @@ function CalcularPrecio ()
 	}
 
 
-	if (cantidad == 5 && ArgentinaLuz == preciodescuento40)
+	if (cantidad == 5 && marca == "ArgentinaLuz")
 	
 	{
 		
-		ArgentinaLuz= document.getElementById("Marca").value;
+		
 		document.getElementById("precioDescuento").value= preciodescuento40;
 
 	}
