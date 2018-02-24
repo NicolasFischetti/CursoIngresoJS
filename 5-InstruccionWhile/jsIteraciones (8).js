@@ -8,25 +8,31 @@ function Mostrar()
 	var acumulador;
 	var respuesta='si';
 
-	while (respuesta=="si")
+	while (true)
 
 	{
 		contador++;
 		numero= prompt("Ingrese su numero");
+		
+		if (numero== null)
+		{
+			respuesta= prompt("Seguro quiere salir, ingrese si");
+		
+			if (respuesta== "si")
+					
+			break;					  
+		}
 		numero= parseInt(numero);
+
 		if (numero > 0)
 		{
-			positivo+=numero;
-			
+			positivo+=numero;			
 		}
 		else if (numero < 0)
 		{
 			negativo*=numero;
-		
 		}
-		
-		respuesta= prompt("para continuar si");
-		
+	
 
 	}
 	
