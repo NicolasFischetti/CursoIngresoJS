@@ -22,70 +22,56 @@ function Mostrar()
 			
 
 			contador++;	
-			sexo= prompt("Ingrese su sexo");
 			notas= prompt("Ingrese la nota del alumno "+contador);
+
+			while (isNaN(notas) || notas < 0 || notas > 10 )
+			{ 	
+				notas= prompt("Ingrese nota nuevamente");
+			}
+
+			sexo= prompt("Ingrese su sexo");
 			notas= parseInt(notas);
 			acumulador= acumulador+notas;
 
-			if (notas >= 0 && notas <= 10 )
-			{ 	
-				
-			}
-
-			 else 
-			 {
-			 	notas= prompt("Ingrese nota nuevamente");
-			 }
-			
-
-			if (!(sexo == "f" || sexo== "m" ))
+			while (!(sexo == "f" || sexo== "m" ))
 
 			{
 				sexo= prompt("Ingrese sexo nuevamente");
 			}
 			
-			if (sexo == "f")
 
-			{
-				sexo= "femenino";
-			}
-
-			else (sexo== "m")
-			{
-				sexo== "masculino";
-			}
-
-			if (sexo > 0)
+			if (sexo == "m" && notas >= 6)
 
 				{			
-					cantivarones+= sexo;
 					cantivarones++;			
 				}
 
-		}
+			if (contador == 1)
 
-				
-
-				if (contador== 3)
-
-				{
+			{
 					min=notas;
-				}
+			}
 
-				else if (min > notas)
+			else if (min > notas)
 
-				{
+			{
 					min=notas;
 					
-				}
-				alert("La nota minima es: "+min);
+			}
 
-				promedios= acumulador/contador;
-				alert("El promedio es: "+promedios);
+		}
+
+			
 
 				
-				alert("La cantidad de varones es "+cantivarones);
+		alert("La nota minima es: "+min);
 
+		promedios= acumulador/contador;
+		alert("El promedio es: "+promedios);
 
+				
+				
+
+		alert("La cantidad de varones son: "+cantivarones);	
 
 }
