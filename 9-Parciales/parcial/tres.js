@@ -7,15 +7,15 @@ function Mostrar()
 	var alambre;
 
 
-	largo= document.getElementById('largo').value;
+	largo= document.getElementById('alrgo').value;
 	ancho= document.getElementById("ancho").value;
 
-	var largo= parseInt(largo);
-	var ancho= parseInt(ancho);
+	largo= parseInt(largo);
+	ancho= parseInt(ancho);
 
-	var perimetro= largo + ancho;
+	perimetro= largo + ancho;
 
-	var alambre= perimetro / 3;
+	alambre= perimetro / 3;
 
 	alert("Los metros necesarios son: "+alambre)
 

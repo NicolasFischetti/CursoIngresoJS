@@ -1,72 +1,79 @@
 function Mostrar()
 {
-	//Realizar el algoritmo que permita ingresar números positivos (validar que sea positivo) hasta que el
-//usuario quiera e informar al terminar el ingreso por document.write:
-//a) la cantidad de números pares.
-//b) el promedio de todos los números ingresados.
-//c) la suma de todos los números.
-//d) El número máximo y el mínimo.
+	//pedir tres datos hasta que el cliente quiera. datos: nombre del animal. peso del animal (valida mayor a 0) y 
+	// temperatura del habitat del animal (validar entre -40 y +40). Informar el nombre del animal mas pesado. El nombre
+	// del animal de la temperatura mas baja. // la cantidad de temperaturas pares que se ingresaron. El promedio del peso
+	// de todos los animales. La temperatura maxima y la temperatura minima.
 
- 	var cantdepares= 0;
- 	var contador= 0;
- 	var acumulador= 0;
- 	var numero;
- 	var max;
- 	var min;
- 	var promedio;
- 	var respuesta= "si";
+	var nombreAnimal;
+	var pesoAnimal;
+	var temperHabitat;
+	var respuesta= "si";
+	var minPeso;
+	var minPeso;
+	var tempMin;
+	var tempMax;
+	var contador= 0;
+	var acumulador= 0;
+	var cantTemperaturas;
+	var promedio;
+	var animalPesado;
 
-	while (respuesta != "no")
-
+	while (respuesta != "no" )
 	{
 		contador++;
-		numero= prompt("Ingrese el numero");
+		nombreAnimal= prompt("Ingrese nombre del animal");
+		pesoAnimal= prompt("Ingrese peso del animal");
+		pesoAnimal= parseInt(pesoAnimal);
+		temperHabitat= prompt("Ingrese temperatura del habitat");
+		temperHabitat= parseInt(temperHabitat);
 
-	while (isNaN(numero) || numero < 1)
-
-		{
-			numero= prompt("Ingrese el numero nuevamente");
-		}
-		numero= parseInt(numero);
-		acumulador= acumulador+numero;
-	
-
-	if (numero % 2== 0 && numero != 0)
+		while (isNaN(pesoAnimal) || pesoAnimal < 0 )
 
 		{
-			cantdepares++;
+			pesoAnimal=prompt("Ingrese el peso nuevamente");
 		}
 
-	if (contador == 1)
-
-		{
-			max= numero;
-			min= numero;
-		}
-
-	if (min > numero)
 		
+
+		while (!(temperHabitat > -40 || temperHabitat > 40 || isNaN(temperHabitat)))
 		{
-			min=numero;
+			temperHabitat=prompt("Ingrese la temperatura nuevamente");
 		}
-	else if (max < numero)
+
 		
+
+		if (contador == 1)
 		{
-			max=numero;
+			minPeso= pesoAnimal;
+			maxPeso= pesoAnimal;
 		}
 
-	respuesta= prompt("Ingrese si para continuar");
+		else if (minPeso>pesoAnimal)
+		{
+			minPeso= pesoAnimal;
+		}
 
-	}
+		else (maxPeso <pesoAnimal)
+		{
+			maxPeso=pesoAnimal;
+		}
 
-	promedio= acumulador/contador;
+		if (contador == 1)
+		{
+			TempMin= temperHabitat;
+			tempMax= temperHabitat;
+		}
+		else if (TempMin > temperHabitat)
+		{
+			tempMin= temperHabitat;
+		}
+		else (tempMax < temperHabitat)
+		{
+			tempMax= temperHabitat;
+		}
 
-	alert("promedio" +promedio);
-	alert("pares "+cantdepares);
-	alert("max "+max);
-	alert("min "+min);
-	alert("acumulador "+acumulador);
+	 }
 
-
-
+		
 }
