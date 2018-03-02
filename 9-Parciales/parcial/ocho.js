@@ -33,6 +33,7 @@ function Mostrar()
 
 		{
 			pesoAnimal=prompt("Ingrese el peso nuevamente");
+			pesoAnimal= parseInt(pesoAnimal);
 		}
 
 		temperHabitat= prompt("Ingrese temperatura del habitat");
@@ -41,6 +42,7 @@ function Mostrar()
 		while (temperHabitat < -40 || temperHabitat > 40 || isNaN(temperHabitat))
 		{
 			temperHabitat=prompt("Ingrese la temperatura nuevamente");
+			temperHabitat= parseInt(temperHabitat);
 		}
 
 		if (contador == 1)
