@@ -18,6 +18,7 @@ function Mostrar()
 	var cantTemperaturas= 0;
 	var promedio;
 	var animalPesado;
+	var nombreAnimalTempMin;
 
 	while (respuesta != "no" )
 	{
@@ -47,16 +48,14 @@ function Mostrar()
 			maxPeso= pesoAnimal;
 			minPeso= pesoAnimal;
 			animalPesado=nombreAnimal;
-			nombreAnimal=tempMin;
-
+			nombreAnimalTempMin= nombreAnimal;
 		}
 
 		else if (maxPeso<pesoAnimal)
 		{
 			maxPeso= pesoAnimal;
-			
+			animalPesado=nombreAnimal;	
 		}
-
 
 		else if (minPeso >pesoAnimal)
 		{
@@ -71,6 +70,7 @@ function Mostrar()
 		else if (TempMin > temperHabitat)
 		{
 			tempMin= temperHabitat;
+			nombreAnimalTempMin= nombreAnimal;
 		}
 		else if (tempMax < temperHabitat)
 		{
@@ -92,5 +92,6 @@ function Mostrar()
 	alert("El promedio del peso es: "+acumulador/contador);
 	alert("La temperatura minima es: "+tempMin);
 	alert("La temperatura maxima es: "+tempMax);
+
 
 }
