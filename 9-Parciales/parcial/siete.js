@@ -16,22 +16,24 @@ function Mostrar()
 	var sexo;
 
 
-	while (contador <= 2)
+	while (contador <= 5)
 
 		{
 			
 
 			contador++;	
 			notas= prompt("Ingrese la nota del alumno "+contador);
+			notas= parseInt(notas);
 
 			while (isNaN(notas) || notas < 0 || notas > 10 )
 			{ 	
 				notas= prompt("Ingrese nota nuevamente");
+				notas= parseInt(notas);
 			}
 
-			sexo= prompt("Ingrese su sexo");
-			notas= parseInt(notas);
 			acumulador= acumulador+notas;
+			sexo= prompt("Ingrese su sexo");
+						
 
 			while (!(sexo == "f" || sexo== "m" ))
 
@@ -67,10 +69,7 @@ function Mostrar()
 		alert("La nota minima es: "+min);
 
 		promedios= acumulador/contador;
-		alert("El promedio es: "+promedios);
-
-				
-				
+		alert("El promedio es: "+promedios);	
 
 		alert("La cantidad de varones son: "+cantivarones);	
 

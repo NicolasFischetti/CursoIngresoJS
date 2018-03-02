@@ -20,6 +20,15 @@ function Mostrar()
 		contador++;
 		importe=prompt("Ingrese el importe del dia: "+contador);
 		importe=parseInt(importe);
+		
+
+		while (importe == 0  || isNaN(importe))
+
+		{
+			importe= prompt("Ingrese el importe nuevamente del dia: "+contador);
+			importe= parseInt(importe);
+		}
+
 		acumulador=acumulador+importe;
 
 
@@ -30,7 +39,7 @@ function Mostrar()
 			min= importe;
 		 }
 
-		 if (max < importe)
+		else if (max < importe)
 		{
 			
 			max= importe;
@@ -41,19 +50,10 @@ function Mostrar()
 			
 			min= importe;
 		}
-
-
-		if (importe == 0  || importe == null)
-
-		{
-			importe= prompt("Ingrese el importe nuevamente del dia: "+contador);
-		}
-
 		
 
 	}
 		
-		document.getElementById('importeFinal').value= acumulador;
 		alert("El numero máximo fue: "+max);
 		alert("El numero mínimo fue: "+min);
 
