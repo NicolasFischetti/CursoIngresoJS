@@ -10,7 +10,7 @@ function Mostrar()
 	var temperHabitat;
 	var respuesta= "si";
 	var minPeso;
-	var minPeso;
+	var maxPeso;
 	var tempMin;
 	var tempMax;
 	var contador= 0;
@@ -25,38 +25,38 @@ function Mostrar()
 		nombreAnimal= prompt("Ingrese nombre del animal");
 		pesoAnimal= prompt("Ingrese peso del animal");
 		pesoAnimal= parseInt(pesoAnimal);
-		temperHabitat= prompt("Ingrese temperatura del habitat");
-		temperHabitat= parseInt(temperHabitat);
+		
 
-		while (isNaN(pesoAnimal) || pesoAnimal < 0 )
+		while (isNaN(pesoAnimal) || pesoAnimal <= 0 )
 
 		{
 			pesoAnimal=prompt("Ingrese el peso nuevamente");
 		}
 
-		
+		temperHabitat= prompt("Ingrese temperatura del habitat");
+		temperHabitat= parseInt(temperHabitat);
 
-		while (!(temperHabitat > -40 || temperHabitat > 40 || isNaN(temperHabitat)))
+		while (temperHabitat < -40 || temperHabitat > 40 || isNaN(temperHabitat))
 		{
 			temperHabitat=prompt("Ingrese la temperatura nuevamente");
 		}
 
-		
-
 		if (contador == 1)
 		{
-			minPeso= pesoAnimal;
 			maxPeso= pesoAnimal;
-		}
-
-		else if (minPeso>pesoAnimal)
-		{
 			minPeso= pesoAnimal;
+			acumulador=acumulador+pesoAnimal;
 		}
 
-		else (maxPeso <pesoAnimal)
+		else if (maxPeso<pesoAnimal)
 		{
-			maxPeso=pesoAnimal;
+			maxPeso= pesoAnimal;
+			animalPesado=nombreAnimal;
+		}
+
+		else (minPeso >pesoAnimal)
+		{
+			minPeso=pesoAnimal;
 		}
 
 		if (contador == 1)
@@ -73,7 +73,20 @@ function Mostrar()
 			tempMax= temperHabitat;
 		}
 
+		if (temperHabitat % 2 == 0 && temperHabitat !=0 )
+
+		{
+			cantTemperaturas++;
+		}
+
+		respuesta=prompt("Escriba si para continuar");
 	 }
 
-		
+	alert("El nombre del animal mas pesado es: "+animalPesado+" y el peso del animal es: "+maxPeso);
+	alert("El nombre del animal es: y su temperatura es: "+tempMin);
+	alert("La cantidad de temperaturas pares es: "+cantTemperaturas);
+	alert("El promedio del peso es: "+acumulador/contador);
+	alert("La temperatura minima es: "+tempMin);
+	alert("La temperatura maxima es: "+tempMax);
+
 }
